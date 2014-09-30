@@ -22,6 +22,7 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 TODO:
 	- All of Fury spells and procs
 	- Mortal wounds on Mortal Strike
+	- Thunder Clap needs to be added to snare category in DRData
 	- Level 100 talents
 
 --]]
