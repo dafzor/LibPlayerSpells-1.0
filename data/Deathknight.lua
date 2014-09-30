@@ -20,7 +20,80 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub("LibPlayerSpells-1.0")
 if not lib then return end
-lib:__RegisterSpells("DEATHKNIGHT", "60000", 1, {
+
+lib:__RegisterSpells("DEATHKNIGHT", "60000", 2, {
+	COOLDOWN = {
+		42650, -- Army of the Dead
+		61999, -- Raise Ally
+		47568, -- Empower Rune Weapon
+		[48734] = "SURVIVAL", -- Death Pact
+		INTERRUPT = {
+			 47528, -- Mind Freeze
+			[91802] = "HARMFUL AURA", -- Shambling Rush (Ghoul)    -- NOTE: 2 sec root. Inclusion in DRData?
+			[47476] = "HARMFUL AURA", -- Strangulate
+		},
+		AURA = {
+			HELPFUL = {
+				  49016, -- Unholy Frenzy
+				[145629] = 'SURVIVAL', -- Anti-Magic Zone
+			},
+			HARMFUL = {
+				49206, -- Summon Gargoyle
+				91800, -- Gnaw (Ghoul)                             -- NOTE: listed only as provider in DRData?
+				91797, -- Monstrous Blow (Ghoul)                   -- NOTE: listed only as provider in DRData?
+			},
+			PERSONAL = {
+				115989, -- Unholy Blight
+				 96268, -- Death's Advance
+				 51271, -- Pillar of Frost
+				SURVIVAL = {
+					 49039, -- Lichborne
+					 48707, -- Anti-Magic Shell
+					 48792, -- Icebound Fortitude
+					 81256, -- Dancing Rune Weapon
+					 49222, -- Bone Shield
+					 55233, -- Vampiric Blood
+					113072, -- Might of Ursoc (Symbiosis)
+					115018, -- Desecrated Ground
+					 42650, -- Armoy of the Dead (for damage reduction while chaneling)
+				},
+			},
+		},
+	},
+	AURA = {
+		PERSONAL = {
+			 50421, -- Scent of Blood
+			114851, -- Blood Charge
+			  3714, -- Path of Frost
+			 48263, -- Blood Presence
+			 48266, -- Frost Presence
+			 48265, -- Unholy Presence
+			 81141, -- Crimson Scourge
+			 51124, -- Killing Machine
+			 59052, -- Freezing Fog
+			 81340, -- Sudden Doom
+		},
+		PET = {
+			  91342, -- Shadow Infusion
+			  63560, -- Dark Transformation -- NOTE: shadow infusion is not possible when this is active
+			[111673] = "INVERT_AURA" -- Control Undead
+		},
+		HELPFUL = {
+			115635, -- Death Barrier
+			 77535, -- Blood Shield
+		},
+		HARMFUL = {
+			 55095, -- Frost Fever
+			 55078, -- Blood Plague
+			 43265, -- Death and Decay
+			 45524, -- Chains of Ice
+			-- 73975, -- Necrotic Strike -- NOTE: added twice through something else, maybe as Slow Casting debuff category and Heal Absorb category
+			 77606, -- Dark Simulacrum
+			114866, -- Soul Reaper (Blood)
+			130735, -- Soul Reaper (Frost)
+			130736, -- Soul Reaper (Unholy)
+		},
+	},
 	RAIDBUFF = {
 		[ 55610] = "HASTE VERSATILITY", -- Unholy Aura
 		[ 57330] = "ATK_POWER",         -- Horn of Winter
@@ -28,6 +101,24 @@ lib:__RegisterSpells("DEATHKNIGHT", "60000", 1, {
 	},
 }, {
 	-- Map aura to provider
+	[ 55095] =  59921, -- Frost Fever
+	[ 55078] =  59879, -- Blood Plague
+	[ 81141] =  81136, -- Crimson Scourge
+	[ 81256] =  49028, -- Dancing Rune Weapon
+	[145629] =  51052, -- Anti-Magic Zone
+	[115018] = 108201, -- Desecrated Ground
+	[ 51124] =  51128, -- Killing Machine
+	[ 59052] =  59057, -- Freezing Fog <= Rime
+	[ 81340] =  49530, -- Sudden Doom
+	[ 91342] =  49572, -- Shadow Infusion
+	[115635] =  63333, -- Death Barrier <= Glyph of Death Coil
+	[114851] =  45529, -- Blood Charge <= Blood Tap                -- NOTE: stack count covered by the default ui
+	[ 91802] =  47482, -- Shambling Rush <= Leap (Ghoul)
+	[ 91800] =  47481, -- Gnaw (Ghoul)
+	[ 91797] =  47481, -- Monstrous Blow <= Gnaw (Ghoul)
+	[ 77535] =  49998, -- Blood Shield to Blood Strike
+	-- map spell id to provider?
+	[ 45477] =  58631, -- Icy Touch <= Glyph of Icy Touch
 }, {
 	-- Map aura to modified spell(s)
 })

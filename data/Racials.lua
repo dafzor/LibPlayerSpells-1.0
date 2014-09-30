@@ -20,7 +20,7 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub("LibPlayerSpells-1.0", true)
 if not lib then return end
-lib:__RegisterSpells("RACIAL", 50400, 1, {
+lib:__RegisterSpells("RACIAL", 60000, 2, {
 	COOLDOWN = {
 		AURA = {
 			PERSONAL = {
