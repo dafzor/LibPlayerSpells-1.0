@@ -412,7 +412,7 @@ function lib:__RegisterSpells(category, interface, minor, newSpells, newProvider
 	-- Build the flags
 	local categoryFlags = constants[category] or 0
 	for spellId, flagDef in pairs(defs) do
-		ValidateSpellId(spellId, "spell", 2)
+		--ValidateSpellId(spellId, "spell", 2)
 		if spells[spellId] ~= nil then
 			error(format("%s: spell #%d already defined in '%s' database", MAJOR, spellId, sources[spellId]), 2)
 		end

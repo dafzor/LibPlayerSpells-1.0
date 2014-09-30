@@ -101,14 +101,14 @@ lib:__RegisterSpells("DEATHKNIGHT", "60000", 2, {
 	},
 }, {
 	-- Map aura to provider
-	[ 55095] =  59921, -- Frost Fever
-	[ 55078] =  59879, -- Blood Plague
+	--[ 55095] =  59921, -- Frost Fever
+	--[ 55078] =  59879, -- Blood Plague
 	[ 81141] =  81136, -- Crimson Scourge
 	[ 81256] =  49028, -- Dancing Rune Weapon
 	[145629] =  51052, -- Anti-Magic Zone
 	[115018] = 108201, -- Desecrated Ground
 	[ 51124] =  51128, -- Killing Machine
-	[ 59052] =  59057, -- Freezing Fog <= Rime
+	--[ 59052] =  59057, -- Freezing Fog <= Rime
 	[ 81340] =  49530, -- Sudden Doom
 	[ 91342] =  49572, -- Shadow Infusion
 	[115635] =  63333, -- Death Barrier <= Glyph of Death Coil
@@ -118,7 +118,7 @@ lib:__RegisterSpells("DEATHKNIGHT", "60000", 2, {
 	[ 91797] =  47481, -- Monstrous Blow <= Gnaw (Ghoul)
 	[ 77535] =  49998, -- Blood Shield to Blood Strike
 	-- map spell id to provider?
-	[ 45477] =  58631, -- Icy Touch <= Glyph of Icy Touch
+	--[ 45477] =  58631, -- Icy Touch <= Glyph of Icy Touch
 }, {
 	-- Map aura to modified spell(s)
 })
