@@ -23,7 +23,7 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 	* Stone Bulwark and other totem buff/debuffs are ovewriten by ABA totem duration tracking
 	* map auras to modifiers doesn't work, only on auras to providers
 	* Echos of elements should hint the button instead of highlight it
-	* Malestrom weapon should only flash flash at 5 stacks
+	* Malestrom weapon should only flash at 5 stacks
 	* Frozen power aura doesn't work (not enough diference in duration?)
 
 	TODO:
@@ -153,7 +153,7 @@ lib:__RegisterSpells("SHAMAN", "60000", 2, {
 	[ 63685] =   8056, -- Frozen Power => Frost Shock (Talent)
 	[ 64695] =  51485, -- Earthgrab Totem Root (Talent)
 	[114896] = 108273, -- Windwalker Totem (Talent)
-	
+
 	[ 53817] = {403, 421, 8004, 73920, }, -- Maelstrom Weapon => Lightning, Chain Lighting, Healing Surge, Healing Rain (Enhancement)
 	[ 53390] = {77472, 8004, },           -- Tidal Wave => Healing Wave, Healing Surge (Restoration)
 	[159103] = {17364, 60103, 1535 },     -- Echo of Elements => Stormstrike, Lava Lash, Fire Nova (Talent, Enhancement)
