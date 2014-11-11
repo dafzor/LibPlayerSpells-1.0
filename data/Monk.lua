@@ -20,7 +20,7 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub("LibPlayerSpells-1.0")
 if not lib then return end
-lib:__RegisterSpells("MONK", "60000", 2, {
+lib:__RegisterSpells("MONK", "60000", 4, {
 	COOLDOWN = {
 		 101643, -- Transcendence
 		 109132, -- Roll
@@ -30,6 +30,9 @@ lib:__RegisterSpells("MONK", "60000", 2, {
 		[116705] = "HARMFUL INTERRUPT",
 		 119996, -- Transcendence: Transfer
 		AURA = {
+			HELPFUL = {
+				124081, -- Zen Sphere
+			},
 			HARMFUL = {
 				115078, -- Paralysis
 				118585, -- Leer of the Ox
@@ -39,12 +42,17 @@ lib:__RegisterSpells("MONK", "60000", 2, {
 				130320, -- Rising Sun Kick
 			},
 			PERSONAL = {
+				 116841, -- Tiger's Lust
+				 116847, -- Rushing Jade Wind
 				[115288] = "POWER_REGEN", -- Energizing Brew
+				 123402, -- Guard with Glyph
 				SURVIVAL = {
 					115176, -- Zen Meditation -- FIXME: buff currently unvisible. move to cooldowns if not resolved by blizz
 					115295, -- Guard
 					115308, -- Elusive Brew
 					120954, -- Fortifying Brew
+					122278, -- Dampen Harm
+					122783, -- Diffuse Magic
 					125174, -- Touch of Karma
 					137562, -- Nimble Brew
 				},
@@ -64,6 +72,7 @@ lib:__RegisterSpells("MONK", "60000", 2, {
 			101546, -- Spinning Crane Kick
 			115307, -- Shuffle
 			116740, -- Tigereye Brew
+			119085, -- Momentum, should be seen on 109132, -- Roll
 			125359, -- Tiger Power
 			127722, -- Crane's Zeal
 			137639, -- Storm, Earth and Fire
@@ -82,6 +91,7 @@ lib:__RegisterSpells("MONK", "60000", 2, {
 	[115307] = 115069, -- Shuffle <-- Stance of the Sturdy Ox
 	[116330] = 115180, -- Dizzying Haze
 	[118585] = 115543, -- Leer of the Ox
+	[119085] = 109132, -- Momentum --> Roll
 	[120954] = 115203, -- Fortifying Brew
 	[121125] = 115080, -- Death Note <-- Touch of Death
 	[127722] = 154436, -- Crane's Zeal <-- Stance of the Spirited Crane
